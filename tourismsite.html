@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="touristcss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <head>
+        <title>Bangalore City</title>
+    </head>
+    <body>
+        
+        <header class="Image">
+            <nav>
+                <div class="logo"><h1 class="">Namma Bengaluru</h1></div>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <a href="https://www.gettyimages.in/photos/bangalore-city">Gallery</a>
+                    <a href="https://www.instagram.com/akashguptaking">Contact</a>
+                    <a href="https://en.wikipedia.org/wiki/Bangalore">About</a>
+                </div>
+            </nav>
+            
+            <main>
+                <div class="mySlides fade"> 
+                    <img src="images/1674762844617.jpg" style="width: 100%; height:100%;">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="images/sri-radha-krishna-temple-located-bangalore-india-one-largest-iskcon-temples-world-sri-radha-krishna-iskcon-193764552_jpg-transformed.webp" style="width:100%; height:100%; " >
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/church.png" style="width:100%; height:100%;" >
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/wonderla.png" style="width:100%; height:100%;" >
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/commerce.png" style=" width:100%; height:100%;" >
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/nandi.png" style=" width:100%; height:100%;" >
+                </div>
+               
+                <section>
+                    <h3>Welcome to Bengaluru</h3>
+                    <h1>DO COME & VISIT <span class="change"></span></h1>
+                    <p>"Bengaluru once is not Enough"</p>
+                    <a href="#" class="btn1">learn more</a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-989295812%3A1674766276295450&authuser=0&continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fclient%3Dsafari%26rls%3Den%26q%3Dlogin%2Bpage%26ie%3DUTF-8%26oe%3DUTF-8&ec=GAlAAQ&hl=en&flowName=GlifWebSignIn&flowEntry=AddSession" class="btn2">Signup here</a>
+                </section> 
+                <!-- <p id="credit">© 2023 Tourism Site by Akash Gupta </p> -->
+            </main> 
+        </header>
+    </body>
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            // let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            if (slideIndex < 1) {slideIndex = 1}    
+            // for (i = 0; i < dots.length; i++) {
+            //     dots[i].className = dots[i].className.replace(" active", "");
+            // }
+            // alert(slideIndex);
+            slides[slideIndex-1].style.display = "contents";  
+            // console.log(slideIndex-1);
+            // dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 1300); // Change image every 2 seconds
+        }
+        
+    </script>
+</html>
